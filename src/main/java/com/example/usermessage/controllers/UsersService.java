@@ -23,11 +23,6 @@ public class UsersService {
         return usersRepository.findAll();
     }
 
-    public User addUser(User user){
-        usersRepository.save(user);
-        return user;
-    }
-
     public List<User> filterUsers(String searchName){
         List<User> searchedUsers = usersRepository.findAll()
                 .stream()
